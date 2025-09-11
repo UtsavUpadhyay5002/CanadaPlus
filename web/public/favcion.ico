@@ -1,0 +1,11 @@
+// web/public/favicon.ico
+<!-- This would be a binary ICO file. For placeholder, create a simple 16x16 icon with "P" or use a generic favicon -->
+
+// web/public/icons/icon-192.png
+<!-- Placeholder: 192x192 PNG with "P" text or simple logo on #0D47A1 background -->
+
+// web/public/icons/icon-512.png  
+<!-- Placeholder: 512x512 PNG with "P" text or simple logo on #0D47A1 background -->
+
+// web/public/placeholder.png
+<!-- Placeholder: neutral gray rectangle, roughly 16:9 aspect ratio, ~400x225px -->
