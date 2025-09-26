@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "canadaplus-82950"
-  }
+    "default": "canada-plus-news"
+  },
+  "targets": {},
+  "etags": {}
 }

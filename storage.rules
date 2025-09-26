@@ -1,0 +1,15 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Article images - public read access
+    match /images/articles/{articleId}/{fileName} {
+      allow read: if true;
+      allow write: if false; // No public writes
+    }
+    
+    // All other paths - no public access
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

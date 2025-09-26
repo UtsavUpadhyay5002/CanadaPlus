@@ -1,14 +1,15 @@
-// Phase-1: lock writes to backend only; no direct client reads.
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /articles/{id} {
-      allow read: if false;
-      allow write: if false; // writes only via Admin SDK in Functions
+    // Articles collection - public read for published articles only
+    match /articles/{articleId} {
+      allow read: if resource.data.status == 'published';
+      allow write: if false; // No public writes
     }
-    match /runs/{runId} {
-      allow read: if false;
-      allow write: if false;
+    
+    // All other collections - no public access
+    match /{document=**} {
+      allow read, write: if false;
     }
   }
 }
